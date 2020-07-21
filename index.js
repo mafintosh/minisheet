@@ -50,19 +50,13 @@ function rules (s) {
       continue
     }
 
-    if (ch === '{' || ch === ';' || ch === ':') {
-      lvl++
-      ctrl = true
-    }
-
-    if (ch === '"' || ch === "'") {
-      string = ch
-    }
+    if (ch === '{') lvl++
+    if (ch === '{' || ch === ';' || ch === ':') ctrl = true
+    if (ch === '"' || ch === "'") string = ch
 
     if (ch === '}') {
-      lvl--
       rule += ch
-      if (lvl === 0) {
+      if (!--lvl) {
         all.push(rule)
         rule = ''
         ctrl = true
