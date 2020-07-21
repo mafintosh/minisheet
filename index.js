@@ -56,10 +56,10 @@ function rules (s) {
 
     if (ch === '}') {
       rule += ch
+      ctrl = true
       if (!--lvl) {
         all.push(rule)
         rule = ''
-        ctrl = true
       }
       continue
     }
