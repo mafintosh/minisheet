@@ -1,6 +1,6 @@
 {
   "name": "minisheet",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tiny module that implements a tiny subset of sheetify, without using transforms.",
   "main": "index.js",
   "dependencies": {},
