@@ -63,7 +63,7 @@ function rules (s) {
       lvl--
       rule += ch
       if (lvl === 0) {
-        all.push(rule + ch)
+        all.push(rule)
         rule = ''
         ctrl = true
       }
