@@ -30,6 +30,7 @@ function rules (s) {
   let string = ''
   let escaped = false
   let ctrl = true
+  let lvl = 0
 
   for (let i = 0; i < s.length; i++) {
     const ch = s[i]
@@ -50,6 +51,7 @@ function rules (s) {
     }
 
     if (ch === '{' || ch === ';' || ch === ':') {
+      lvl++
       ctrl = true
     }
 
@@ -58,9 +60,13 @@ function rules (s) {
     }
 
     if (ch === '}') {
-      all.push(rule + ch)
-      rule = ''
-      ctrl = true
+      lvl--
+      rule += ch
+      if (lvl === 0) {
+        all.push(rule + ch)
+        rule = ''
+        ctrl = true
+      }
       continue
     }
 
