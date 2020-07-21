@@ -1,0 +1,18 @@
+{
+  "name": "minisheet",
+  "version": "0.0.0",
+  "description": "Tiny module that implements a tiny subset of sheetify, without using transforms.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/minisheet.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/minisheet/issues"
+  },
+  "homepage": "https://github.com/mafintosh/minisheet"
+}
